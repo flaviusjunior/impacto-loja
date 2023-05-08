@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-container {
+  flex-grow: 1;
+}
+/* classes auxiliadoras */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* log */
+.logo {
+  color: white;
+  font-family: sans-serif;
+}
+.logo > span {
+  color: orangered;
+}
+
+/* cabeçalho */
+.cabecalho {
+  background: black;
+}
+
+.cabecalho .logo {
+  font-size: 40px;
+  padding: 0 10px;
+}
+.cabecalho .logo span {
+  font-size: 60px;
+}
+
+.menu-pricipal {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-pricipal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-pricipal li {
+  display: inline;
+}
+.menu-pricipal a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 10px 8px;
+  border-bottom: 2px solid black;
+  color: orangered;
+  font-family: sans-serif;
+}
+.menu-pricipal a:hover {
+  border-color: orangered;
+}
+
+/* conteudo principal */
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+.main-container .secao-destaque {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.secao-destaque h2 {
+  font-family: sans-serif;
+}
+.main-container .secao-recursos {
+  min-width: 250px;
+  padding: 10px;
+}
+.produto__descricao, .produto__preco {
+  font-family: sans-serif;
+  margin: 6px 0;
+}
+.produto__preco {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.produto-card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 16px -4px #ddd;
+  border-radius: 6px;
+  margin: 20px 0;
+  display: grid;
+  padding-right: 8px;
+  grid-template:
+    "a b" 40px
+    "a c" 55px
+    "a d" 50px
+    / 2fr 3fr;
+  
+  gap: 10px;
+  justify-content: stretch;
+  /* height: 100%; */
+  /* align-content: stretch; */
+}
+
+.produto-card img {
+  /* border: 1px solid red;
+  border-radius: inherit; */
+  grid-area: a;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.produto-card .produto__name {
+  grid-area: b;
+  font-size: 24px;
+  font-family: sans-serif;
+  align-self: center;
+  /* margin: 10px 0; */
+}
+
+.produto-card .produto__info {
+  grid-area: c;
+}
+
+.produto-card .btn-comprar {
+  grid-area: d;
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  background: #31b820;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 6px;
+  align-self: center;
+}
+
+/* rodapé */
+.rodape {
+  background: black;
+  text-align: right;
+}
+.rodape .logo {
+  font-size: 10px;
+  padding: 5px 10px;
+}
+.rodape .logo span {
+  font-size: 15px;
+}
